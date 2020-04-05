@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>music app</title>
+      <!-- We use Twitter Bootstrap as the default styling for our page-->
+      <link rel="stylesheet" 
+          href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href=" {{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <div class="container">
+        {% block content %}
+        <div class="row">
+            Chords: something osmething
+        </div>
+        {% endblock %}
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+        </div>
+    </footer>
+    <!-- Include page dependencies -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Famo.us -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/famous.min.js') }} "></script>
+
+    <!-- Leap -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/leap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/leap-plugins.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/setup.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>
